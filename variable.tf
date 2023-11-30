@@ -38,5 +38,5 @@ variable "final_snapshot_identifier" {
 }
 
 variable "vpc_security_group_ids" {
-  type = [string]
+  type = list(string)
 }
