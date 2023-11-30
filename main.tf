@@ -9,11 +9,7 @@ resource "aws_db_instance" "rds_db" {
   publicly_accessible  = true
   multi_az             = false
   #db_subnet_group_name = "your-db-subnet-group"
-
   vpc_security_group_ids = var.vpc_security_group_ids
-
-  #parameter_group_name = "default.mysql5.7"
-
   final_snapshot_identifier = var.final_snapshot_identifier
   skip_final_snapshot = false
 }
