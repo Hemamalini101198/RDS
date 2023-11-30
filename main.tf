@@ -11,6 +11,8 @@ resource "aws_db_instance" "rds_db" {
   storage_encrypted     = true
   #db_subnet_group_name = "your-db-subnet-group"
   vpc_security_group_ids = var.vpc_security_group_ids
+  performance_insights_enabled = true
+  performance_insights_retention_period = 7
   final_snapshot_identifier = var.final_snapshot_identifier
   skip_final_snapshot = false
 }
